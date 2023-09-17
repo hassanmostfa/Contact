@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: 'Poppins', sans-serif;
+}
+body{
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   background: #0d6efd;
+   padding: 0px 10px;;
+   min-height: 100vh;
+}
+
+.container{
+   width: 720px;
+   background: #fff;
+   border-radius: 8px;
+}
+
+header{
+   padding: 18px 25px;
+   font-size: 19px;
+   font-weight: 600;
+   border-bottom: 1px solid #bfbfbf;
+}
+
+form{
+   margin: 35px 30px;
+}
+
+form .boxes {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   margin-bottom: 25px;
+   flex-wrap: wrap;
+}
+form .boxes .box {
+   position: relative;
+   height: 50px;
+   width: calc(100% / 2 - 13px);
+   margin-bottom: 25px;
+}
+form .boxes .box input ,
+form .boxes textarea {
+   height: 100%;
+   width: 100%;
+   outline: none;
+   padding: 0px 40px;
+   border: 1px solid #bfbfbf;
+   border-radius: 5px;
+}
+
+form .boxes .box input::placeholder,
+form .boxes textarea::placeholder{
+   color: #bfbfbf;
+}
+
+form .boxes .box input:focus,
+form .boxes textarea:focus{
+   color: #0d6efd;
+   border: 2px solid #0d6efd;
+}
+
+form .boxes .box i:hover{
+      color: #0d6efd;
+}
+
+
+form .boxes .box i{
+   position: absolute;
+   left: 15px;
+   top: 50%;
+   transform: translateY(-50%);
+   font-size: 17px;
+   color: #bfbfbf;
+}
+
+.message {
+   position: relative;
+}
+.message i{
+   position: absolute;
+   font-size: 20px;
+   top: 18px;
+   left: 15px;
+   color: #bfbfbf;
+}
+form .boxes textarea{
+   width: 661px;
+   height: 118px;
+   min-width: 100%;
+   max-width: 661px;
+   min-height: 120px ;
+   max-height: 300px;
+   padding: 15px 20px 0px 48px;
+}
+.button-area{
+   align-items: center;
+   display: flex;
+}
+.button-area button{
+   padding: 10px;
+   color: white;
+   background: #0d6efd;
+   border: none;
+   cursor: pointer;
+   border-radius: 5px;
+}
+
+.button-area span{
+   color: #0d6efd;
+   display: none;
+   margin-left: 20px;
+}
+
+@media (max-width : 700px ){
+   .container header {
+      text-align: center;
+   }
+   form .boxes {
+      flex-direction: column;
+   }
+   form .boxes textarea {
+      width: 260px;
+   }
+      form .boxes{
+         align-items: revert;
+      }
+      form .boxes .box input {
+         width: 215%;
+      }
+      .button-area {
+         flex-direction: column;
+      }
+      .button-area button {
+         width: 100%;
+      }
+      .button-area span {
+         font-size: 14px;
+         margin-left: 0px;
+         margin-top: 15px;
+      }
+}
